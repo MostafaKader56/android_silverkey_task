@@ -89,7 +89,7 @@ com/silverkey/task/
 
 ## 📱 Download APK
 
-You can download the latest APK from Google Drive:
+You can download the APK from Google Drive:
 **[Download News App APK](https://drive.google.com/drive/folders/1W3k6v4loTaJAxoN8rPRd4AgCZbERHXDp?usp=sharing)**
 
 ## 🎨 UI/UX Design
