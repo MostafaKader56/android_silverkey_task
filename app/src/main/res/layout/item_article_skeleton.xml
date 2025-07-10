@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/skeleton_shimmer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:shimmer_auto_start="true"
+    app:shimmer_duration="1200">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20dp"
+        android:layout_marginBottom="15dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Image placeholder -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Title placeholder: 70% width -->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="0.7"
+                    android:background="@color/gray" />
+
+                <!-- Time placeholder: 30% width -->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="14dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="0.3"
+                    android:background="@color/gray" />
+
+                <!-- Description placeholders -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="14dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/gray" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="14dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="0.8"
+                    android:background="@color/gray" />
+
+                <!-- Button placeholder -->
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/gray"
+                    android:layout_gravity="end"
+                    android:radius="18dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</com.facebook.shimmer.ShimmerFrameLayout>

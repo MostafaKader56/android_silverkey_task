@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.ProfileFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:title="@string/my_profile"
+            app:titleTextColor="?attr/colorSecondary" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginBottom="@dimen/_300dp"
+            android:elevation="1dp"
+            app:cardBackgroundColor="?attr/colorSurface">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_20dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_user_image"
+                    android:layout_width="@dimen/_150dp"
+                    android:layout_height="@dimen/_150dp"
+                    android:layout_marginTop="@dimen/_32dp"
+                    android:src="@drawable/img_user_avatar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt_user_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_30dp"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:lineSpacingExtra="2dp"
+                    android:maxLines="2"
+                    android:text="Ahmed Mostafa"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_user_image" />
+
+                <TextView
+                    android:id="@+id/txt_user_join_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_40dp"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:gravity="center_horizontal"
+                    android:text="Joined January 2025"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_user_name" />
+
+                <ImageView
+                    android:id="@+id/ic_mail"
+                    android:layout_width="@dimen/_24dp"
+                    android:layout_height="@dimen/_24dp"
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:src="@drawable/ic_mail"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_user_join_date" />
+
+                <ImageView
+                    android:id="@+id/ic_phone"
+                    android:layout_width="@dimen/_24dp"
+                    android:layout_height="@dimen/_24dp"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:layout_marginBottom="@dimen/_24dp"
+                    android:contentDescription="@string/image_contentDescription"
+                    android:src="@drawable/ic_phone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ic_mail" />
+
+                <TextView
+                    android:id="@+id/txt_user_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/_8dp"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="@dimen/_2dp"
+                    android:maxLines="3"
+                    android:text="ahmed.mostafa@gmail.com"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_mail"
+                    app:layout_constraintStart_toEndOf="@id/ic_mail"
+                    app:layout_constraintTop_toTopOf="@id/ic_mail" />
+
+                <TextView
+                    android:id="@+id/txt_user_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/_8dp"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="@dimen/_2dp"
+                    android:maxLines="3"
+                    android:text="01234567890"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_phone"
+                    app:layout_constraintStart_toEndOf="@id/ic_phone"
+                    app:layout_constraintTop_toTopOf="@id/ic_phone" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
